@@ -1,17 +1,15 @@
+<header>
+  <p>Header</p>
+
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/list">Lista</a>
+  </nav>
+</header>
+
 <h1>Hello World, Angular</h1>
-<h2>Testando H2</h2>
-<p>Alguma coisa</p>
+<router-outlet></router-outlet>
 
-<div>
-  <a href="#">Clique aqui</a>
-</div>
-
-<app-first-component></app-first-component>
-<app-parent-data [name]="userName" [data]="userData"></app-parent-data>
-<app-directives></app-directives>
-<app-if-render></app-if-render>
-<app-events></app-events>
-<app-emitter></app-emitter>
-<app-list-render></app-list-render>
-<app-pipes></app-pipes>
-<app-two-way-binding></app-two-way-binding>
+<footer>
+  <p>Footer</p>
+</footer>
