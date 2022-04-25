@@ -16,5 +16,4 @@ export class EventsComponent implements OnInit {
   showMessage(): void {
     this.canShow = !this.canShow;
   }
-
 }
