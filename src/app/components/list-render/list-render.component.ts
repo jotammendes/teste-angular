@@ -10,34 +10,19 @@ import { ListService } from 'src/app/services/list.service';
   styleUrls: ['./list-render.component.css']
 })
 export class ListRenderComponent implements OnInit {
-  animals: Animal[] = [
-    {
-      name: 'Turca',
-      type: 'cachorro',
-      age: 10,
-    },
-    {
-      name: 'Tom',
-      type: 'gato',
-      age: 14,
-    },
-    {
-      name: 'Jerry',
-      type: 'rato',
-      age: 4,
-    },
-    {
-      name: 'Molly',
-      type: 'cavalo',
-      age: 20,
-    },
-  ];
+  animals: Animal[] = [];
 
   animalDetails = '';
 
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService) {
+    this.getAnimais();
+  }
 
   ngOnInit(): void {
+  }
+
+  getAnimais(): void {
+    this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
 
   showAge(animal: Animal): void {
